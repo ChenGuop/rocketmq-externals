@@ -2,7 +2,7 @@
 
 #docker rmi styletang/rocketmq-console-ng:latest
 docker rmi registry.cn-qingdao.aliyuncs.com/nluohe/rocketmq-console:latest
-#mvn clean package -Dmaven.test.skip=true docker:build
+mvn clean package -Dmaven.test.skip=true docker:build
 docker tag styletang/rocketmq-console-ng:latest registry.cn-qingdao.aliyuncs.com/nluohe/rocketmq-console:latest
 expect -c "
    spawn docker login --username=桔灯行网络科技 registry.cn-qingdao.aliyuncs.com
